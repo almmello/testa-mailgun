@@ -1,4 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Mailgun Test App
+
+Este projeto é um exemplo de integração Next.js + Mailgun para envio de emails via API.
+
+## Como usar
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repo.git
+   cd seu-repo
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente:**
+   - Copie o arquivo `.env.example` para `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Preencha os valores reais no `.env`:
+     - `MAILGUN_API_KEY`: sua chave privada do Mailgun
+     - `MAILGUN_DOMAIN`: seu domínio verificado no Mailgun (ex: `institutochaya.app`)
+     - `MAILGUN_FROM_EMAIL`: email do remetente (ex: `postmaster@institutochaya.app`)
+     - `MAILGUN_FROM_NAME`: nome do remetente (ex: `Instituto Chaya`)
+     - `MAILGUN_DEFAULT_TO`: destinatário padrão para testes
+     - `MAILGUN_DEFAULT_SUBJECT` e `MAILGUN_DEFAULT_TEXT`: (opcional) valores padrão do formulário
+     - `MAILGUN_API_URL`: (opcional) use `https://api.eu.mailgun.net` para domínios europeus
+
+4. **Rode o projeto em desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+   Acesse [http://localhost:3000](http://localhost:3000) para usar o formulário.
+
+## Produção
+- Certifique-se de usar um domínio verificado e ativo no Mailgun.
+- Nunca suba seu arquivo `.env` para o GitHub.
+- O projeto está pronto para deploy em Vercel, Netlify, etc.
+
+## Segurança
+- As chaves e segredos ficam apenas no backend (API routes do Next.js).
+- O frontend nunca expõe variáveis sensíveis.
+- O arquivo `.env` está no `.gitignore` por padrão.
+
+## Licença
+MIT
 
 ## Getting Started
 
